@@ -1,0 +1,11 @@
+_site
+.sass-cache
+.jekyll-metadata
+node_modules
+Gemfile.lock
+.DS_Store
+.env
+*.gem
+.bundle
+_asset_bundler_cache
+npm-debug.log*
