@@ -33,6 +33,13 @@ If you want to highlight different paragraphs, you can target individual element
 {% highlight html %}
 <!-- Green Paragraph -->
 <p class="green-select">Your paragraph text here.</p>
+<ul>
+  <li class="item1"></li>
+  <li class="item2"></li>
+  <li class="item3"></li>
+  <li class="item4"></li>
+  <li class="item5"></li>
+</ul>
 {% endhighlight %}
     
 ### CSS (Specific Area Colour Change)
