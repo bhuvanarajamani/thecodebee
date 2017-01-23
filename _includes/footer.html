@@ -5,45 +5,55 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <ul class="list-inline text-center">
                     <li>
-                        <a href="#">
+                        <a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    {% if site.twitter_username %}
+                    <li>
+                        <a href="//twitter.com/{{ site.twitter_username }}" target="_blank">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
+                    {% endif %}
+                    {% if site.facebook_username %}
                     <li>
-                        <a href="#">
+                        <a href="//facebook.com/{{ site.facebook_username }}" target="_blank">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
+                    {% endif %}
+                    {% if site.github_username %}
                     <li>
-                        <a href="#">
+                        <a href="//github.com/{{ site.github_username }}" target="_blank">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
+                    {% endif %}
                 </ul>
-                <p class="copyright text-muted">Copyright &copy; {{ site.time | date: '%Y' }} - Code Bee</p>
+                <p class="copyright text-muted">&copy; {{ site.copyright_name }} {{ site.time | date: '%Y' }}</p>
             </div>
         </div>
     </div>
 </footer>
 
 <!-- jQuery -->
-<script src="vendor/jquery/jquery.min.js"></script>
+<script src="{{ "/vendor/jquery/jquery.min.js " | prepend: site.baseurl }}"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="{{ "/vendor/bootstrap/js/bootstrap.min.js " | prepend: site.baseurl }}"></script>
 
-<!-- Contact Form JavaScript -->
-<script src="js/jqBootstrapValidation.js"></script>
-<script src="js/contact_me.js"></script>
-
-<!-- Theme JavaScript -->
-<script src="js/clean-blog.min.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="{{ "/js/clean-blog.min.js " | prepend: site.baseurl }}"></script>

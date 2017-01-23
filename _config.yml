@@ -6,6 +6,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://thecodebee.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: BhuvanaRajamani
 github_username:  bhuvanarajamani
+copyright_name: Code Bee
 
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
