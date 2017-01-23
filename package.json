@@ -1,15 +1,25 @@
 {
   "name": "thecodebee.github.io",
   "version": "1.0.0",
+  "title": "Code Bee",
+  "homepage": "http://thecodebee.com",
+  "author": "Bhuvana Rajamani",  
   "main": "gulpfile.js",
   "license": "MIT",
   "devDependencies": {
+    "bootstrap": "^3.3.7",
     "browser-sync": "^2.18.6",
+    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.3.2",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.2",
+    "gulp-header": "^1.8.8",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
-    "gulp-util": "^3.0.8"
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.8",
+    "jquery": "^3.1.1"
   }
 }

@@ -1,10 +1,5 @@
-/* ==========================================================================
-   Variables
-   ========================================================================== */
-
-// Colours
-$brand: #fd6309;
-// original theme color $brand;
+@import "variables.scss";
+@import "syntax.scss";
 
 body {
   font-family: 'Lora', 'Times New Roman', serif;
