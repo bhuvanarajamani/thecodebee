@@ -20,9 +20,14 @@ gulp.task('css', () => {
       cascade: false
     }))
     .pipe(css_minify())
-    .pipe(gulp.dest('assets'));
+    .pipe(gulp.dest('_site/assets/css'))
+    .pipe(browserSync.reload({stream:true}))
+    .pipe(gulp.dest('assets/css'));
 });
 
+/**
+* Build the Jekyll Site
+*/
 gulp.task('build', () => {
   const jekyll = child.spawn('bundle', ['exec', 'jekyll', 'build', '--watch', '--incremental', '--drafts']);
 
@@ -34,6 +39,13 @@ gulp.task('build', () => {
 
   jekyll.stdout.on('data', jekyllLogger);
   jekyll.stderr.on('data', jekyllLogger);
+});
+
+/**
+* Do page reload
+*/
+gulp.task('reload', () => {
+  browserSync.reload();
 });
 
 gulp.task('serve', () => {
@@ -50,4 +62,4 @@ gulp.task('serve', () => {
   gulp.watch(cssFiles, ['css']);
 });
 
-gulp.task('default', ['css', 'build', 'serve']);
+gulp.task('default', ['css', 'build', 'serve', 'reload']);
