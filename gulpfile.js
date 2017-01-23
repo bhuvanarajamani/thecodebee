@@ -77,22 +77,6 @@ gulp.task('copy', function() {
         .pipe(gulp.dest('vendor/font-awesome'))
 })
 
-/*
-gulp.task('css', () => {
-  gulp.src(cssFiles)
-    .pipe(scss().on('error', scss.logError))
-    .pipe(concat('main.css'))
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false
-    }))
-    .pipe(css_minify())
-    .pipe(gulp.dest('_site/assets/css'))
-    .pipe(browserSync.reload({stream:true}))
-    .pipe(gulp.dest('./assets/css'));
-});
-*/
-
 // Build the Jekyll Site
 gulp.task('build', () => {
   const jekyll = child.spawn('bundle', ['exec', 'jekyll', 'build', '--watch', '--incremental', '--drafts']);

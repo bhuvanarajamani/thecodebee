@@ -392,14 +392,14 @@ hr.small {
 .intro-header .site-heading,
 .intro-header .post-heading,
 .intro-header .page-heading {
-  padding: 100px 0 50px;
+  padding: 50px 0 25px;
   color: white; }
 
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading,
   .intro-header .post-heading,
   .intro-header .page-heading {
-    padding: 150px 0; } }
+    padding: 75px 0; } }
 
 .intro-header .site-heading,
 .intro-header .page-heading {
