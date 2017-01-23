@@ -124,7 +124,7 @@ gulp.task('serve', () => {
     }
   });
 
-  gulp.watch(cssFiles, ['css']);
+  gulp.watch(cssFiles, ['sass']);
 });
 
 //Default task for dev
