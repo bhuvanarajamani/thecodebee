@@ -632,5 +632,8 @@ img::-moz-selection {
   color: white;
   background: transparent; }
 
+/*
 body {
-  -webkit-tap-highlight-color: #fd6309; }
+  -webkit-tap-highlight-color: #795548;
+}
+*/
