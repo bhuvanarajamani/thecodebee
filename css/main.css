@@ -648,9 +648,3 @@ tr:nth-child(even) {
   max-width: 150px;
   max-height: 150px;
   border-radius: 50%; }
-
-/*
-body {
-  -webkit-tap-highlight-color: #795548;
-}
-*/
