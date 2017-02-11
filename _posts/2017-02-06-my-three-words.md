@@ -6,6 +6,8 @@ date:       2017-02-06 12:00:00
 
 ## My 3 words for a successful year
 
+<img src="{{ site.baseurl }}/img/my3words.png" alt="My 3 Words">
+
 At the beginning of this year, I have seen lot of action in the social media about setting goals, resolutions etc for a successful 2017. I generally don't beleive in resolutions as beaking that in the middle shakes your self-confidence. But I was intrigued by the buzz around the [3 words](http://chrisbrogan.com/3words2017/) by Chris Brogan. I found Chris' reasoning and the approach as rather simple but also impactful. After thinking and re-thinking as I wanted these 3 words to align with my goals for this year, I've finally nailed down my 3 words for 2017.
 
 ### 3 words for 2017
