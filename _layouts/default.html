@@ -6,6 +6,7 @@
     {{ content }}
     {% include footer.html%}
     {% if jekyll.environment == 'production' %}
+        {% include advertisement.html %}
         {% include analytics.html %}
     {% endif %}
 </body>
