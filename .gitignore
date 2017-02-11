@@ -9,3 +9,4 @@ Gemfile.lock
 .bundle
 _asset_bundler_cache
 npm-debug.log*
+.vscode

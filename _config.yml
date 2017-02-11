@@ -1,12 +1,13 @@
 title: Code Bee
-email: bhuvana.cr@gmail.com
+email: dev@thecodebee.com
 description: > # this means to ignore newlines until "baseurl:"
   Blog about my learnings and experiences with various web / mobile development experiements using Angular, Firebase, Ionic, Chatbots powered by different AI providers and Alexa Skill Kit.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://thecodebee.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: BhuvanaRajamani
-github_username:  bhuvanarajamani
+twitter_username: codebeeatwork
+github_username:  thecodebee
 copyright_name: Code Bee
+repository: thecodebee/thecodebee.github.io
 
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID

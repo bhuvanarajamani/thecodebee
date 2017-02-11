@@ -1,11 +1,16 @@
 ---
 layout : page
 title: About
-description: "This is what I do."
+description: ""
 icon: "fa-info-circle"
 ---
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>
+## About this Blog
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestiae debitis nobis, quod sapiente qui voluptatum, placeat magni repudiandae accusantium fugit quas labore non rerum possimus, corrupti enim modi! Et.</p>
+[thecodebee.com](http://thecodebee.com) is where Bhuvana posts tips, learnings and experiences from various programming experiements as well as side projects.
+
+## About Bhuvana Rajamani
+
+Bhuvana is a Senior Delivery Manager during the day and a software programmer by the night. She's passionate about learning and building apps & tools using different programming frameworks and languages.
+
+

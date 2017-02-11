@@ -2,7 +2,6 @@
 layout:     post
 title:      "Syntax Highlighting"
 date:       2017-01-22 12:00:00
-author:     "Bhuvana Rajamani"
 ---
 ### CSS (Global Colour Change)
 
