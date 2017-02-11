@@ -11,6 +11,6 @@ icon: "fa-info-circle"
 
 ## About Bhuvana Rajamani
 
-Bhuvana is a Senior Delivery Manager during the day and a software programmer by the night. She's passionate about learning and building apps & tools using different programming frameworks and languages.
+Bhuvana is a Senior Delivery Manager during the day and a developer by the night *(and weekends too...)* . She's passionate about learning and building apps & tools using different programming frameworks and languages.
 
 

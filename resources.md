@@ -1,10 +1,10 @@
 ---
 layout : page
 title: Resources
-description: "List of resources used for this blog"
+description: ""
 icon: "fa-list"
 ---
-
+## List of resources used for this blog
 
 | Tool          | Purpose                       | Link                                          |
 | ------------- |-------------                  | ----------------------------------------------|
