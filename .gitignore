@@ -9,4 +9,10 @@ Gemfile.lock
 .bundle
 _asset_bundler_cache
 npm-debug.log*
-.vscode
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
