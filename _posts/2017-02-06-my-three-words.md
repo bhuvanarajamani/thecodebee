@@ -2,6 +2,7 @@
 layout:     post
 title:      "My 3 words"
 date:       2017-02-06 12:00:00
+comments: true
 ---
 
 ## My 3 words for a successful year

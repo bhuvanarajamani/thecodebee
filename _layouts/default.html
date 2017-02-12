@@ -7,6 +7,9 @@
     {% include footer.html%}
     {% if jekyll.environment == 'production' %}
         {% include advertisement.html %}
+        {% if page.comments %}
+            {% include disqus.html %}
+        {% endif %}
         {% include analytics.html %}
     {% endif %}
 </body>
