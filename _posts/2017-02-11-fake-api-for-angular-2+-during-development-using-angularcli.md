@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "3 Ways in setting up fake REST API for Angular2+ during development using Angular CLI"
+title:      "3 Ways to setup fake REST API for Angular2+ during development using Angular CLI"
 date:       2017-02-11 12:00:00
 comments: true
 ---
