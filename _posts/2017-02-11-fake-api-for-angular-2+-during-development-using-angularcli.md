@@ -1,11 +1,11 @@
 ---
 layout:     post
-title:      "Setting up fake REST API for Angular2+ during development using Angular CLI"
+title:      "3 Ways in setting up fake REST API for Angular2+ during development using Angular CLI"
 date:       2017-02-11 12:00:00
 comments: true
 ---
 
-[Angular CLI](https://github.com/angular/angular-cli) has made the scaffolding of an Angular2+ application so simple. The next major use case for most of the web applications is accessing a REST API and perform one or all of the CRUD operations. Though there are services like [Firebase](https://firebase.google.com) which have made the data storage as well as API access possible in few simple steps, I'm going to explain about another easy approach for setting up the same.
+[Angular CLI](https://github.com/angular/angular-cli){:target="_blank"} has made the scaffolding of an Angular2+ application so simple. The next major use case for most of the web applications is accessing a REST API and perform one or all of the CRUD operations. Though there are services like [Firebase](https://firebase.google.com){:target="_blank"} which have made the data storage as well as API access possible in few simple steps, I'm going to explain about another easy approach for setting up the same.
 
 ### Table of contents
 
@@ -16,17 +16,17 @@ comments: true
   - <a href="#serve-scaffolded-project">Serving the scaffolded project</a>
 - <a href="#data-structure">Data structure</a>
   - <a href="#create-json">Create JSON file</a>
-- <a href="#method-1">Access Fake REST API - Method#1</a>
+- <a href="#method-1">Access Fake REST API - Method:1</a>
   - <a href="#create-service-class">Scaffold Service Class</a>
   - <a href="#call-api">Call API</a>
   - <a href="#access-data">Access data from component</a>
   - <a href="#present-data">Present data in UI</a>
-- <a href="#method-2">Access Fake REST API - Method#2</a>
+- <a href="#method-2">Access Fake REST API - Method:2</a>
   - <a href="#install-json-server">Install JSON Server</a>
   - <a href="#run-json-server">Run JSON Server</a>
   - <a href="#update-service">Update Service</a>
   - <a href="#proxy-setup">Setting up proxy for API</a>
-- <a href="#method-3">Access Fake REST API - Method#3</a>
+- <a href="#method-3">Access Fake REST API - Method:3</a>
   - <a href="#install-concurrently">Install concurrently</a>
   - <a href="#updated-server-command">Start server</a>
 - <a href="#source-code">Source Code Repo</a>
@@ -45,7 +45,7 @@ Install Angular CLI by running below command.
 > Use `sudo npm install -g @angular/cli` if you have any issues during installation. 
 
 #### Create new project
-As this tutorial is about building a Fake REST API, let's name our project accordingly. Run this in a folder where you would want to create a project.
+As this tutorial is about building a Fake REST API. So, let's name our project accordingly. Run this in a folder where you would want to create your project.
 
 {% highlight bash %}
   ng new fake-rest-api
@@ -53,9 +53,9 @@ As this tutorial is about building a Fake REST API, let's name our project accor
 
 
 #### Install Yarn
-For most part of this tutorial, we would be using Yarn for package management as well as serving the project.
+For most part of this tutorial, we would be using [Yarn](https://yarnpkg.com){:target="_blank"} for package management as well as serving the project.
 
-Head over to [https://yarnpkg.com/en/docs/install](https://yarnpkg.com/en/docs/install) to install the latest version. 
+Head over to [https://yarnpkg.com/en/docs/install](https://yarnpkg.com/en/docs/install){:target="_blank"} to install the latest version. 
 
 #### Serving the project
 
@@ -67,7 +67,6 @@ App should be running at `http://localhost:4200/`.
 
 ### Data structure
 Let's take a simple example of a Books API. Below is the structure of the data.
-
 <div>
   <ul>
     <li>Book ID</li>
@@ -102,9 +101,9 @@ Let's create `data.json` file under `fake-rest-api\src\assets\` folder. Copy the
   }
 {% endhighlight %}
 
-Stop the angular local server by pressing `ctrl+c` and start again using `yarn start`. Only then you can access the `data.json` file.
+Stop the angular local server by pressing `ctrl+c` and start again using `yarn start`. Only then you can access the newly created `data.json` file.
 
-### Access Fake REST API - Method#1
+### Access Fake REST API - Method:1
 Method#1 uses the relative path of `data.json` for API call.
 
 #### Scaffold Service Class
@@ -151,7 +150,8 @@ We need to add the generated service `FakeService` to `providers` array in `app.
 
 #### Call API
 
-Here is the content of `fake.service.ts`.
+Now that we have the service scaffold, let's start writing the logic for calling the API. Here is the content of `fake.service.ts`.
+
 {% highlight javascript %}
   import { Injectable } from '@angular/core';
 
@@ -179,13 +179,13 @@ Here is the content of `fake.service.ts`.
   }
 {% endhighlight %}
 
-`BOOKS_API` contains the path of the data.json file we've created before. We would need to import `Http`, `Observable` classes in order to access the `http` API. We also need `map`, `catch` & `throw` operators.
+`BOOKS_API` contains the path of the `data.json` file we've created before. We would need to import `Http`, `Observable` classes in order to access the `http` API. We also need `map`, `catch` & `throw` operators for mapping the response and catch & throw any errors in that process.
 
 We now have the service ready and the method `getBooks()` is ready to be called from the component.
 
 #### Access the data from service in component
 
-Now that we have the data, let's access the same from our component. In order to keep rest of the project structure simple, we would leverage the `app.component.ts` component to access the data and display in the UI.
+Now that we have the service method, let's access the same from our component. In order to keep rest of the project structure simple, we would leverage the `app.component.ts` component to access the data from service and display in the UI.
 
 We need to subscribe to the `getBooks()` method in order to access the data. Here is how the `app.component.ts` file would look like with the `subscribe` method.
 
@@ -215,7 +215,7 @@ We need to subscribe to the `getBooks()` method in order to access the data. Her
   }
 {% endhighlight %}
 
-> In order to type check the incoming data structure we can create a data model of type `Book`. But for the simplicity of this tutorial, it is left as `any`.
+> In order to type check the incoming data structure we can create a data model of type `Book`. But for the simplicity of this tutorial, object type is left as `any`.
 
 #### Present data in UI
 
@@ -236,7 +236,7 @@ In order to make the data decently presentable, let's add some basic style in `s
   }
 {% endhighlight %}
 
-Here is the content that goes in the `app.component.html`.
+Lets present the data in a simple table. Here is the content that goes in the `app.component.html`.
 
 {% highlight html %}
   <h1>Book data from the Fake REST API</h1>
@@ -267,9 +267,10 @@ Here is the final output in the browser.
 <img src="{{ site.baseurl }}/img/fake-rest-api.png" alt="Fake REST API" class="img-responsive">
 
 > Method#1 should work fine in gh-pages as well.
-> `*ng github-pages:deploy*` has been removed from this version of Angular CLI. 
+> _Note_: `*ng github-pages:deploy*` has been removed from the latest version of Angular CLI. 
 
-### Method#2 - Using JSON Server 
+### Access Fake REST API - Method:2 - Using JSON Server 
+For methods 2 & 3, we would make use of `json-server`.
 
 To learn more about `json-server` go [here](https://github.com/typicode/json-server)
 
@@ -402,7 +403,9 @@ Stop the angular server and start with the command:
 Now you can simply use `yarn startwithproxy` to start the angular server.
 
 
-### Method 3 - Using concurrently
+### Access Fake REST API - Method:3 - Using concurrently
+
+We will use `concurrently` package in order to run multiple commands concurrently. Head to [npm](https://www.npmjs.com/package/concurrently) to understand more about this package.
 
 #### Install concurrently
 
