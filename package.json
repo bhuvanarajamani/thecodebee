@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "title": "Code Bee",
   "homepage": "http://thecodebee.com",
-  "author": "Bhuvana Rajamani",  
+  "author": "Code Bee",  
   "main": "gulpfile.js",
   "license": "MIT",
   "devDependencies": {
