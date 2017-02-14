@@ -4,10 +4,9 @@ title:      "4 ways to host your angular app in under 5 minutes"
 date:       2017-02-14 12:00:00
 comments: true
 ---
+From the time I started learning and playing with Angular2+ last year, I've been using AngularCLI for building projects. I like the packed features from creating a new project from a blank folder to hosting the same in gh-pages. You can do all these without leaving command line *(integrated terminal is available in most of the modern editors)*.
 
-Since I started learning and playing with Angular last year, I've been using AngularCLI for my example projects. I like the packed features from creating a new project from nothing to hosting the same in gh-pages. You can do all these from the command line.
-
-In the latest version of AngularCLI, support for `ng github-pages:deploy` has been dropped. Somehow I couldn't get the alternative option working. So I set out to explore other options that are as simple as this single command based deployment.
+In the latest version of AngularCLI, support for `ng github-pages:deploy` has been dropped. Somehow I couldn't get the suggested alternative option working. So I set out to explore other options that are as simple as `ng github-pages:deploy`.
 
 In this tutorial, I'm presenting the 4 simple ways to host your app in under 5 mins *(or less)* from the comfort of your command line.
 
