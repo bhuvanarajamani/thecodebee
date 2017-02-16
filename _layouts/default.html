@@ -11,6 +11,7 @@
     {% endif %}
     {% include footer.html%}
     {% if jekyll.environment == 'production' %}
+        {% include translate.html %}
         {% include advertisement.html %}
         {% include analytics.html %}
     {% endif %}
