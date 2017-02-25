@@ -4,6 +4,13 @@ title:      "3 Ways to setup fake REST API for Angular2+ during development usin
 date:       2017-02-11 12:00:00
 comments: true
 post-img: "fakeapi.png"
+description: How to simplify the setup fake REST API accessible in AngularCLI during your development cycles
+permalink: /fake-api-for-angular-2+-during-development-using-angularcli/
+path: 2017-02-11-fake-api-for-angular-2+-during-development-using-angularcli.md
+sitemap:
+    priority: 1.0
+    changefreq: 'weekly'
+    lastmod: 2017-02-25T09:13:30-06:00
 ---
 
 [Angular CLI](https://github.com/angular/angular-cli){:target="_blank"} has made the scaffolding of an Angular2+ application so simple. The next major use case for most of the web applications is accessing a REST API and perform one or all of the CRUD operations. Though there are services like [Firebase](https://firebase.google.com){:target="_blank"} which have made the data storage as well as API access possible in few simple steps, I'm going to explain about another easy approach for setting up the same.

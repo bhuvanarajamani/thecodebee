@@ -4,6 +4,13 @@ title:      "4 ways to host your angular app in under 5 minutes"
 date:       2017-02-14 12:00:00
 comments: true
 post-img: "nghost.png"
+description: 4 modern ways to deploy your Angular application in 5 minutes or less
+permalink: /4ways-to-host-angular-app-in-under-5-mins/
+path: 2017-02-14-4ways-to-host-angular-app-in-under-5-mins.md
+sitemap:
+    priority: 0.9
+    changefreq: 'weekly'
+    lastmod: 2017-02-25T09:13:30-06:00
 ---
 From the time I started learning and playing with Angular2+ last year, I've been using AngularCLI for building projects. I like the packed features from creating a new project from a blank folder to hosting the same in gh-pages. You can do all these without leaving command line *(integrated terminal is available in most of the modern editors)*.
 

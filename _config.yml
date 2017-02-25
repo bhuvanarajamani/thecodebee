@@ -11,17 +11,19 @@ repository: thecodebee/thecodebee.github.io
 
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
-# google_tracking_id:
+google_tracking_id: UA-91428525-1
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
-permalink: /:title/
+permalink: /:year/:month/:title
 paginate: 5
 
 # theme: minima
 gems:
   - jekyll-feed
+  - jekyll-seo-tag
+
 exclude:
   - Gemfile
   - Gemfile.lock

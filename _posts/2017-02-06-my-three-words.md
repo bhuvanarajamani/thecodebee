@@ -3,6 +3,13 @@ layout:     post
 title:      "My 3 words for success"
 date:       2017-02-06 12:00:00
 comments: true
+description: My 3 words for an impactful year
+permalink: /my-three-words/
+path: 2017-02-06-my-three-words.md
+sitemap:
+    priority: 0.5
+    changefreq: 'weekly'
+    lastmod: 2017-02-25T09:13:30-06:00
 ---
 
 <img src="{{ site.baseurl }}/img/posts/my3words.png" alt="My 3 Words" class="img-responsive">
