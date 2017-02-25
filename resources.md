@@ -3,6 +3,8 @@ layout : page
 title: Resources
 description: ""
 icon: "fa-list"
+permalink: /resources/
+path: resources.md
 ---
 ## List of resources used for this blog
 

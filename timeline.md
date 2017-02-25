@@ -3,6 +3,8 @@ layout : page
 title: Timeline
 description: ""
 icon: "fa-calendar"
+permalink: /timeline/
+path: timeline.md
 ---
 
 ## 2017

@@ -3,6 +3,8 @@ layout : page
 title: Now
 description: ""
 icon: "fa-clock-o"
+permalink: /now/
+path: now.md
 ---
 
 * Building [Inspirations](https://thecodebee.github.io/inspirations/){:target="_blank"} an [Angular](https://angular.io){:target="_blank"} based app.

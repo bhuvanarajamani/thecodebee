@@ -3,6 +3,8 @@ layout : page
 title: Books
 description: ""
 icon: "fa-book"
+permalink: /books/
+path: books.md
 ---
 ## Now Reading
 

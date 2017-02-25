@@ -3,6 +3,8 @@ layout : page
 title: About
 description: ""
 icon: "fa-info-circle"
+permalink: /about/
+path: about.md
 ---
 
 ## About this Blog
