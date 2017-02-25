@@ -3,7 +3,7 @@ layout: default
 ---
 
 <!-- Post Header -->
-<header class="intro-header" style="background-color: #fd6309">
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/img/posts/{{ page.post-img }}')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -24,11 +24,7 @@ layout: default
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-
 				{{ content }}
-{% if page.post-img %}
-    <img src="{{ site.baseurl }}/img/posts/{{ page.post-img }}" alt="{{ page.title }}" class="img-responsive">
-{% endif %}    
                 <hr>
 
                 <ul class="pager">

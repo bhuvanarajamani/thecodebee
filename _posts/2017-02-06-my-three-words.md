@@ -4,6 +4,7 @@ title:      "My 3 words for success"
 date:       2017-02-06 12:00:00
 comments: true
 description: My 3 words for an impactful year
+post-img: goal.png
 permalink: /my-three-words/
 path: 2017-02-06-my-three-words.md
 sitemap:

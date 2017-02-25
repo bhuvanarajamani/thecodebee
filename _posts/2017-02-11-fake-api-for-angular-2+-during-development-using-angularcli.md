@@ -272,7 +272,7 @@ This html rendering is pretty straightforward. We first check if the `books` obj
 
 Here is the final output in the browser.
 
-<img src="{{ site.baseurl }}/img/fake-rest-api.png" alt="Fake REST API" class="img-responsive">
+<img src="{{ site.baseurl }}/img/posts/fake-rest-api.png" alt="Fake REST API" class="img-responsive">
 
 > Method#1 should work fine in gh-pages as well.
 > _Note_: `*ng github-pages:deploy*` has been removed from the latest version of Angular CLI. 
