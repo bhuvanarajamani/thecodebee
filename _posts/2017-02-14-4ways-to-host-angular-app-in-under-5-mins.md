@@ -80,7 +80,7 @@ Redo the below steps once again and the app should now work perfectly fine.
 
 Below is the view you would see in the browser.
 
-<img src="{{ site.baseurl }}/img/fake-rest-api.png" alt="Fake REST API" class="img-responsive">
+<img src="{{ site.baseurl }}/img/posts/fake-rest-api.png" alt="Fake REST API" class="img-responsive">
 
 > `gh-pages` might take 5-10 mins to get the changes. So check back after few minutes. We can look at other options in the meantime.
 
