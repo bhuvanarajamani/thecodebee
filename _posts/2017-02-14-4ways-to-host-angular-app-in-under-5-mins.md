@@ -47,7 +47,7 @@ Follow below steps to get the generated project hosted into `gh-pages`.
   git subtree push --prefix=dist origin gh-pages 
 {% endhighlight %}
 
-Go to [https://<username>.github.io/fake-rest-api/](https://<username>.github.io/fake-rest-api/) to check the deployed app.
+Go to `https://<username>.github.io/fake-rest-api/` to check the deployed app.
 
 > Like me, you might hit some 404 errors when you launch the app from browser. To fix that, update `<base href="/">` to `<base href="./">` in your `index.html`.
 
