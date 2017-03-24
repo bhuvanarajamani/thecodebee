@@ -7,6 +7,7 @@ post-img: "fakeapi.png"
 description: How to simplify the setup fake REST API accessible in AngularCLI during your development cycles
 permalink: /fake-api-for-angular-2+-during-development-using-angularcli/
 path: 2017-02-11-fake-api-for-angular-2+-during-development-using-angularcli.md
+tags: [angular, angularcli,rest,api,jsonserver]
 sitemap:
     priority: 1.0
     changefreq: 'weekly'

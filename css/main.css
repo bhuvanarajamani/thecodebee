@@ -507,3 +507,11 @@ blockquote {
   margin-top: 20px; }
   blockquote p {
     margin: 0; }
+
+.tag-mark {
+  font-size: 75%;
+  padding: 0 .5rem 0 .5rem;
+  margin-right: .5rem;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #fd6309; }

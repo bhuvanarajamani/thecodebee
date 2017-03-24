@@ -7,6 +7,7 @@ description: My 3 words for an impactful year
 post-img: goal.png
 permalink: /my-three-words/
 path: 2017-02-06-my-three-words.md
+tags: [general, 3words]
 sitemap:
     priority: 0.5
     changefreq: 'weekly'

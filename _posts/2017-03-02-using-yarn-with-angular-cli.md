@@ -7,6 +7,7 @@ post-img: "yarn.png"
 description: Using Yarn in Angular CLI project
 permalink: /using-yarn-with-angular-cli/
 path: 2017-03-02-using-yarn-with-angular-cli.md
+tags: [angular, angularcli,yarn]
 sitemap:
     priority: 0.9
     changefreq: 'weekly'

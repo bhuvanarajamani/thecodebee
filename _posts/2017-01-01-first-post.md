@@ -7,6 +7,7 @@ post-img: "newblog.png"
 description: My very first blog first
 permalink: /first-post/
 path: 2017-01-01-first-post.md
+tags: [general]
 sitemap:
     priority: 0.1
     changefreq: 'weekly'
