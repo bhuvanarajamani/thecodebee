@@ -511,7 +511,7 @@ blockquote {
 .tag-mark {
   font-size: 75%;
   padding: 0 .5rem 0 .5rem;
-  margin-right: .5rem;
+  margin: 0 .5rem 0 .5rem;
   border-radius: 5px;
   background: #ffffff;
   color: #fd6309; }
