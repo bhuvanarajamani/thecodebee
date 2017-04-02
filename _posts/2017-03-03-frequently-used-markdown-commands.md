@@ -7,7 +7,7 @@ post-img: "md.png"
 description: Markdown commands that I frequently use for my blog posts
 permalink: /frequently-used-markdown-commands/
 path: 2017-03-03-frequently-used-markdown-commands.md
-tags: [blog,markdown,cheatsheet]
+tags: [markdown]
 sitemap:
     priority: 0.9
     changefreq: 'weekly'

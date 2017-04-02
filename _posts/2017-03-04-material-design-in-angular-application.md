@@ -7,7 +7,7 @@ post-img: "material.jpg"
 description: Google Material Design in Angular Application using Angular Material
 permalink: /material-design-in-angular-application/
 path: 2017-03-04-material-design-in-angular-application.md
-tags: [angular, angularcli,material,angular-material]
+tags: [angular, angularcli,material design,angular-material]
 sitemap:
     priority: 0.9
     changefreq: 'weekly'
