@@ -4,9 +4,11 @@
 <body>
     {% include nav.html%}
     {{ content }}
+    <div align="center">
+    {% include post_bottom.html %}
+    </div>
     {% if jekyll.environment == 'production' %}
         {% if page.comments %}
-            {% include ad-posts.html %}
             {% include disqus.html %}
         {% endif %}
     {% endif %}
