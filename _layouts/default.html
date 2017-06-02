@@ -4,9 +4,9 @@
 <body>
     {% include nav.html%}
     {{ content }}
-    {% include ad-posts.html %}
     {% if jekyll.environment == 'production' %}
         {% if page.comments %}
+            {% include ad-posts.html %}
             {% include disqus.html %}
         {% endif %}
     {% endif %}
