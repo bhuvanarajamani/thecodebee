@@ -11,6 +11,7 @@ var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
+var imagemin     = require('gulp-imagemin');
 var pkg = require('./package.json');
 
 const siteRoot = '_site';
@@ -33,6 +34,34 @@ gulp.task('sass', function() {
         .pipe(browserSync.reload({
             stream: true
         }))
+});
+
+// Optimizes jpg.
+gulp.task('build:jpg', function() {
+    return gulp.src('img/*.jpg')
+    .pipe(imagemin({ progressive: true }))
+    .pipe(gulp.dest('images'));
+});
+
+// Optimizes png.
+gulp.task('build:png', function() {
+    return gulp.src('img/*.png')
+    .pipe(imagemin({ progressive: true }))
+    .pipe(gulp.dest('images'));
+});
+
+// Optimizes postimg png.
+gulp.task('build:postpng', function() {
+    return gulp.src('img/posts/*.png')
+    .pipe(imagemin({ progressive: true }))
+    .pipe(gulp.dest('images/posts'));
+});
+
+// Optimizes postimg png.
+gulp.task('build:postjpg', function() {
+    return gulp.src('img/posts/*.jpg')
+    .pipe(imagemin({ progressive: true }))
+    .pipe(gulp.dest('images/posts'));
 });
 
 // Minify compiled CSS
@@ -112,4 +141,4 @@ gulp.task('serve', () => {
 });
 
 //Default task for dev
-gulp.task('default', ['sass', 'minify-css', 'minify-js', 'copy', 'build', 'serve', 'reload']);
+gulp.task('default', [ 'build:jpg', 'build:png', 'build:postpng', 'build:postjpg', 'sass', 'minify-css', 'minify-js', 'copy', 'build', 'serve', 'reload']);
