@@ -1,21 +1,22 @@
-const child = require('child_process');
-const browserSync = require('browser-sync').create();
+const child             = require('child_process');
+const browserSync       = require('browser-sync').create();
 
-const gulp = require('gulp');
-const autoprefixer = require('gulp-autoprefixer');
-const concat = require('gulp-concat');
-const css_minify = require('gulp-cssnano');
-const gutil = require('gulp-util');
-const scss = require('gulp-sass');
-var header = require('gulp-header');
-var cleanCSS = require('gulp-clean-css');
-var rename = require("gulp-rename");
-var uglify = require('gulp-uglify');
-var imagemin     = require('gulp-imagemin');
-var pkg = require('./package.json');
+const gulp              = require('gulp');
+const autoprefixer      = require('gulp-autoprefixer');
+const concat            = require('gulp-concat');
+const css_minify        = require('gulp-cssnano');
+const gutil             = require('gulp-util');
+const scss              = require('gulp-sass');
+var header              = require('gulp-header');
+var cleanCSS            = require('gulp-clean-css');
+var rename              = require("gulp-rename");
+var uglify              = require('gulp-uglify');
+var imagemin            = require('gulp-imagemin');
+var del                 = require('del');
+var pkg                 = require('./package.json');
 
-const siteRoot = '_site';
-const cssFiles = '_sass/**/*.?(s)css';
+const siteRoot          = '_site';
+const cssFiles          = '_assets/sass/**/*.?(s)css';
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -25,12 +26,41 @@ var banner = ['/*!\n',
     ''
 ].join('');
 
+
+// Deletes CSS.
+gulp.task('clean:css', function(callback) {
+    del(['_assets/css/main.css',
+        'css/main.min.css'
+    ]);
+    callback();
+});
+
+// Deletes js.
+gulp.task('clean:js', function(callback) {
+    del(['_assets/js/*.js',
+        'js/*.js'
+    ]);
+    callback();
+});
+
+// Deletes vendor folder.
+gulp.task('clean:vendor', function(callback) {
+    del('vendor');
+    callback();
+});
+
+// Deletes vendor folder.
+gulp.task('clean:site', function(callback) {
+    del('_site');
+    callback();
+});
+
 // Compile SCSS files from /_sass into /css
 gulp.task('sass', function() {
-    return gulp.src('_sass/main.scss')
+    return gulp.src('_assets/sass/main.scss')
         .pipe(scss())
         .pipe(header(banner, { pkg: pkg }))
-        .pipe(gulp.dest('css'))
+        .pipe(gulp.dest('_assets/css'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -66,7 +96,7 @@ gulp.task('sass', function() {
 
 // Minify compiled CSS
 gulp.task('minify-css', ['sass'], function() {
-    return gulp.src('css/main.css')
+    return gulp.src('_assets/css/main.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('css'))
@@ -77,7 +107,7 @@ gulp.task('minify-css', ['sass'], function() {
 
 // Minify JS
 gulp.task('minify-js', function() {
-    return gulp.src('js/main.js')
+    return gulp.src('_assets/js/main.js')
         .pipe(uglify())
         .pipe(header(banner, { pkg: pkg }))
         .pipe(rename({ suffix: '.min' }))
@@ -140,5 +170,11 @@ gulp.task('serve', () => {
   gulp.watch(cssFiles, ['sass']);
 });
 
+// cleans all.
+gulp.task('clean:all', ['clean:css', 'clean:js', 'clean:vendor', 'clean:site']);
+
+// minifies all.
+gulp.task('clean:all', ['clean:css', 'clean:js', 'clean:vendor', 'clean:site']);
+
 //Default task for dev
-gulp.task('default', [ 'sass', 'minify-css', 'minify-js', 'copy', 'build', 'serve', 'reload']);
+gulp.task('default', [ 'clean:all', 'sass', 'minify-css', 'minify-js', 'copy', 'build', 'serve', 'reload']);

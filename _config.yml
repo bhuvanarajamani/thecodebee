@@ -34,6 +34,7 @@ exclude:
   - .sass-cache
   - README.md
   - .gitignore
+  - _assets
 
 sass:
   sass_dir: _sass
