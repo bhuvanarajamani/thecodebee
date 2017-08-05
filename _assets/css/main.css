@@ -174,14 +174,9 @@ hr.small {
 
 @media only screen and (min-width: 1170px) {
   .navbar-custom {
-    -webkit-transition: background-color 0.3s;
-    -moz-transition: background-color 0.3s;
     transition: background-color 0.3s;
     /* Force Hardware Acceleration in WebKit */
     -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden; }
@@ -191,9 +186,9 @@ hr.small {
     top: -61px;
     background-color: rgba(255, 255, 255, 0.9);
     border-bottom: 1px solid #f2f2f2;
-    -webkit-transition: -webkit-transform 0.3s;
-    -moz-transition: -moz-transform 0.3s;
-    transition: transform 0.3s; }
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s; }
   .navbar-custom.is-fixed .navbar-brand {
     color: #333333; }
   .navbar-custom.is-fixed .navbar-brand:hover,
@@ -207,17 +202,12 @@ hr.small {
   .navbar-custom.is-visible {
     /* if the user changes the scrolling direction, we show the header */
     -webkit-transform: translate3d(0, 100%, 0);
-    -moz-transform: translate3d(0, 100%, 0);
-    -ms-transform: translate3d(0, 100%, 0);
-    -o-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0); } }
 
 .intro-header {
   background-color: #777777;
   background: no-repeat center center;
   background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
   margin-bottom: 50px; }
@@ -381,9 +371,6 @@ footer .copyright {
   vertical-align: middle;
   vertical-align: baseline;
   opacity: 0;
-  -webkit-transition: top 0.3s ease,opacity 0.3s ease;
-  -moz-transition: top 0.3s ease,opacity 0.3s ease;
-  -ms-transition: top 0.3s ease,opacity 0.3s ease;
   transition: top 0.3s ease,opacity 0.3s ease; }
 
 .floating-label-form-group::not(:first-child) {
@@ -456,6 +443,10 @@ form .row:first-child .floating-label-form-group {
   color: white;
   text-shadow: none;
   background: #fd6309; }
+
+img::-moz-selection {
+  color: white;
+  background: transparent; }
 
 img::selection {
   color: white;

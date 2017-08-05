@@ -2,18 +2,20 @@ const child             = require('child_process');
 const browserSync       = require('browser-sync').create();
 
 const gulp              = require('gulp');
+const path              = require('path');
 const autoprefixer      = require('gulp-autoprefixer');
 const concat            = require('gulp-concat');
 const css_minify        = require('gulp-cssnano');
 const gutil             = require('gulp-util');
 const scss              = require('gulp-sass');
-var header              = require('gulp-header');
-var cleanCSS            = require('gulp-clean-css');
-var rename              = require("gulp-rename");
-var uglify              = require('gulp-uglify');
-var imagemin            = require('gulp-imagemin');
-var del                 = require('del');
-var pkg                 = require('./package.json');
+const header            = require('gulp-header');
+const htmlmin           = require('gulp-htmlmin');
+const cleanCSS          = require('gulp-clean-css');
+const rename            = require("gulp-rename");
+const uglify            = require('gulp-uglify');
+
+const del               = require('del');
+const pkg               = require('./package.json');
 
 const siteRoot          = '_site';
 const cssFiles          = '_assets/sass/**/*.?(s)css';
@@ -60,6 +62,7 @@ gulp.task('build:sass', function() {
     return gulp.src('_assets/sass/main.scss')
         .pipe(scss())
         .pipe(header(banner, { pkg: pkg }))
+        .pipe(autoprefixer())
         .pipe(gulp.dest('_assets/css'))
         .pipe(browserSync.reload({
             stream: true
@@ -87,6 +90,18 @@ gulp.task('minify:js', function() {
         .pipe(browserSync.reload({
             stream: true
         }))
+});
+
+//Minify HTML
+
+gulp.task('minify:html', ['build:jekyll'], function() {
+    return gulp.src([
+        path.join(siteRoot, '*.html'),
+        path.join(siteRoot, '*/*/*.html'),
+        path.join(siteRoot, '*/*/*/*.html')
+    ])
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest(siteRoot));
 });
 
 // Copy vendor libraries from /node_modules into /vendor
@@ -124,7 +139,8 @@ gulp.task('build:jekyll', () => {
 
 //Reload Browser
 gulp.task('site:reload', () => {
-  browserSync.reload();
+  //browserSync.reload();
+  browserSync.reload({stream:true, once: true});
 });
 
 //Serve Jekyll Site
@@ -146,7 +162,7 @@ gulp.task('site:serve', () => {
 gulp.task('clean:all', ['clean:css', 'clean:js', 'clean:vendor', 'clean:site']);
 
 // minifies all.
-gulp.task('minify:all', ['minify:css', 'minify:js']);
+gulp.task('minify:all', ['minify:css', 'minify:js','minify:html']);
 
 // build
 gulp.task('build:all', ['build:sass', 'build:jekyll']);
