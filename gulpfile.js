@@ -56,7 +56,7 @@ gulp.task('clean:site', function(callback) {
 });
 
 // Compile SCSS files from /_sass into /css
-gulp.task('sass', function() {
+gulp.task('build:sass', function() {
     return gulp.src('_assets/sass/main.scss')
         .pipe(scss())
         .pipe(header(banner, { pkg: pkg }))
@@ -66,36 +66,8 @@ gulp.task('sass', function() {
         }))
 });
 
-// // Optimizes jpg.
-// gulp.task('build:jpg', function() {
-//     return gulp.src('img/*.jpg')
-//     .pipe(imagemin({ progressive: true }))
-//     .pipe(gulp.dest('images'));
-// });
-
-// // Optimizes png.
-// gulp.task('build:png', function() {
-//     return gulp.src('img/*.png')
-//     .pipe(imagemin({ progressive: true }))
-//     .pipe(gulp.dest('images'));
-// });
-
-// // Optimizes postimg png.
-// gulp.task('build:postpng', function() {
-//     return gulp.src('img/posts/*.png')
-//     .pipe(imagemin({ progressive: true }))
-//     .pipe(gulp.dest('images/posts'));
-// });
-
-// // Optimizes postimg png.
-// gulp.task('build:postjpg', function() {
-//     return gulp.src('img/posts/*.jpg')
-//     .pipe(imagemin({ progressive: true }))
-//     .pipe(gulp.dest('images/posts'));
-// });
-
 // Minify compiled CSS
-gulp.task('minify-css', ['sass'], function() {
+gulp.task('minify:css', ['build:sass'], function() {
     return gulp.src('_assets/css/main.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
@@ -106,7 +78,7 @@ gulp.task('minify-css', ['sass'], function() {
 });
 
 // Minify JS
-gulp.task('minify-js', function() {
+gulp.task('minify:js', function() {
     return gulp.src('_assets/js/main.js')
         .pipe(uglify())
         .pipe(header(banner, { pkg: pkg }))
@@ -118,7 +90,7 @@ gulp.task('minify-js', function() {
 });
 
 // Copy vendor libraries from /node_modules into /vendor
-gulp.task('copy', function() {
+gulp.task('copy:vendorlib', function() {
     gulp.src(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
         .pipe(gulp.dest('vendor/bootstrap'))
 
@@ -137,7 +109,7 @@ gulp.task('copy', function() {
 })
 
 // Build the Jekyll Site
-gulp.task('build', () => {
+gulp.task('build:jekyll', () => {
   const jekyll = child.spawn('bundle', ['exec', 'jekyll', 'build', '--watch', '--incremental', '--drafts']);
 
   const jekyllLogger = (buffer) => {
@@ -151,12 +123,12 @@ gulp.task('build', () => {
 });
 
 //Reload Browser
-gulp.task('reload', () => {
+gulp.task('site:reload', () => {
   browserSync.reload();
 });
 
 //Serve Jekyll Site
-gulp.task('serve', () => {
+gulp.task('site:serve', () => {
   browserSync.init({
     files: [siteRoot + '/**'],
     notify: false,
@@ -167,14 +139,20 @@ gulp.task('serve', () => {
     }
   });
 
-  gulp.watch(cssFiles, ['sass']);
+  gulp.watch(cssFiles, ['build:sass']);
 });
 
 // cleans all.
 gulp.task('clean:all', ['clean:css', 'clean:js', 'clean:vendor', 'clean:site']);
 
 // minifies all.
-gulp.task('clean:all', ['clean:css', 'clean:js', 'clean:vendor', 'clean:site']);
+gulp.task('minify:all', ['minify:css', 'minify:js']);
+
+// build
+gulp.task('build:all', ['build:sass', 'build:jekyll']);
+
+// serve
+gulp.task('serve:all', ['site:serve', 'site:reload']);
 
 //Default task for dev
-gulp.task('default', [ 'clean:all', 'sass', 'minify-css', 'minify-js', 'copy', 'build', 'serve', 'reload']);
+gulp.task('default', [ 'clean:all', 'minify:all', 'build:all',  'copy:vendorlib', 'serve:all']);
