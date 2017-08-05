@@ -44,24 +44,12 @@
     {% endif %}
 
     <!-- Bootstrap Core CSS -->
-    <!-- <link rel="stylesheet" href="{{ "/css/vendor.min.css" | prepend: site.baseurl }}" media="all"> -->
+    <link rel="stylesheet" href="{{ "/css/vendor.min.css" | prepend: site.baseurl }}" media="all">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ "/css/main.min.css" | prepend: site.baseurl }}" media="all">
   
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open +Sans|Lora|Roboto">
-
-    <script>
-      var cb = function() {
-        var l = document.createElement('link'); l.rel = 'stylesheet';
-        l.href = 'vendor.min.css';
-        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-      };
-      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-          webkitRequestAnimationFrame || msRequestAnimationFrame;
-      if (raf) raf(cb);
-      else window.addEventListener('load', cb);
-    </script>
 
     <!-- Sumo Me script-->
     <script src="//load.sumome.com/" data-sumo-site-id="6cd9e3ecf2eaf515c043962f2dd32f6dd030186d96fd53907a51f7f1bff7f930" async="async"></script>
