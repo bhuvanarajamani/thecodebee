@@ -32,16 +32,14 @@ var banner = ['/*!\n',
 // Deletes CSS.
 gulp.task('clean:css', function(callback) {
     del(['_assets/css/main.css',
-        'css/main.min.css'
+        'css/*.css'
     ]);
     callback();
 });
 
 // Deletes js.
 gulp.task('clean:js', function(callback) {
-    del(['_assets/js/*.js',
-        'js/*.js'
-    ]);
+    del('js/*.js');
     callback();
 });
 
@@ -57,16 +55,31 @@ gulp.task('clean:site', function(callback) {
     callback();
 });
 
-// Compile SCSS files from /_sass into /css
-gulp.task('build:sass', function() {
-    return gulp.src('_assets/sass/main.scss')
-        .pipe(scss())
-        .pipe(header(banner, { pkg: pkg }))
-        .pipe(autoprefixer())
-        .pipe(gulp.dest('_assets/css'))
-        .pipe(browserSync.reload({
-            stream: true
-        }))
+// Copy vendor libraries from /node_modules into /vendor
+gulp.task('copy:vendorlib', function() {
+    gulp.src(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
+        .pipe(gulp.dest('_assets/vendor/bootstrap'))
+
+    gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/jquery/dist/jquery.min.js'])
+        .pipe(gulp.dest('_assets/vendor/jquery'))
+
+    gulp.src([
+            'node_modules/font-awesome/**',
+            '!node_modules/font-awesome/**/*.map',
+            '!node_modules/font-awesome/.npmignore',
+            '!node_modules/font-awesome/*.txt',
+            '!node_modules/font-awesome/*.md',
+            '!node_modules/font-awesome/*.json'
+        ])
+        .pipe(gulp.dest('_assets/vendor/font-awesome'))
+})
+
+gulp.task('copy:fonts', function() {
+    gulp.src([
+        '_assets/vendor/font-awesome/fonts/*.*',
+        '_assets/vendor/bootstrap/fonts/*.*'
+    ])
+    .pipe(gulp.dest('fonts'))
 });
 
 // Minify compiled CSS
@@ -80,9 +93,40 @@ gulp.task('minify:css', ['build:sass'], function() {
         }))
 });
 
+// Minify compiled CSS
+gulp.task('minify:vendorcss', function() {
+    return gulp.src([
+        '_assets/vendor/bootstrap/css/bootstrap.css',
+        '_assets/vendor/font-awesome/css/font-awesome.css'
+        ])
+        .pipe(concat('vendor.css'))
+        .pipe(cleanCSS({ compatibility: 'ie8' }))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('css'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+});
+
 // Minify JS
 gulp.task('minify:js', function() {
     return gulp.src('_assets/js/main.js')
+        .pipe(uglify())
+        .pipe(header(banner, { pkg: pkg }))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('js'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+});
+
+// Minify vendor JS
+gulp.task('minify:vendorjs', function() {
+    return gulp.src([
+        '_assets/vendor/jquery/jquery.js',
+        '_assets/vendor/bootstrap/js/bootstrap.js'
+        ])
+        .pipe(concat('vendor.js'))
         .pipe(uglify())
         .pipe(header(banner, { pkg: pkg }))
         .pipe(rename({ suffix: '.min' }))
@@ -104,24 +148,17 @@ gulp.task('minify:html', ['build:jekyll'], function() {
     .pipe(gulp.dest(siteRoot));
 });
 
-// Copy vendor libraries from /node_modules into /vendor
-gulp.task('copy:vendorlib', function() {
-    gulp.src(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
-        .pipe(gulp.dest('vendor/bootstrap'))
-
-    gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/jquery/dist/jquery.min.js'])
-        .pipe(gulp.dest('vendor/jquery'))
-
-    gulp.src([
-            'node_modules/font-awesome/**',
-            '!node_modules/font-awesome/**/*.map',
-            '!node_modules/font-awesome/.npmignore',
-            '!node_modules/font-awesome/*.txt',
-            '!node_modules/font-awesome/*.md',
-            '!node_modules/font-awesome/*.json'
-        ])
-        .pipe(gulp.dest('vendor/font-awesome'))
-})
+// Compile SCSS files from /_sass into /css
+gulp.task('build:sass', function() {
+    return gulp.src('_assets/sass/main.scss')
+        .pipe(scss())
+        .pipe(header(banner, { pkg: pkg }))
+        .pipe(autoprefixer())
+        .pipe(gulp.dest('_assets/css'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+});
 
 // Build the Jekyll Site
 gulp.task('build:jekyll', () => {
@@ -162,7 +199,7 @@ gulp.task('site:serve', () => {
 gulp.task('clean:all', ['clean:css', 'clean:js', 'clean:vendor', 'clean:site']);
 
 // minifies all.
-gulp.task('minify:all', ['minify:css', 'minify:js','minify:html']);
+gulp.task('minify:all', ['minify:css','minify:vendorcss', 'minify:js', 'minify:vendorjs','minify:html']);
 
 // build
 gulp.task('build:all', ['build:sass', 'build:jekyll']);
@@ -171,4 +208,4 @@ gulp.task('build:all', ['build:sass', 'build:jekyll']);
 gulp.task('serve:all', ['site:serve', 'site:reload']);
 
 //Default task for dev
-gulp.task('default', [ 'clean:all', 'minify:all', 'build:all',  'copy:vendorlib', 'serve:all']);
+gulp.task('default', [ 'clean:all', 'copy:vendorlib', 'minify:all', 'copy:fonts', 'build:all', 'serve:all']);

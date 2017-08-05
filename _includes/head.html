@@ -44,24 +44,12 @@
     {% endif %}
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="{{ "/vendor/bootstrap/css/bootstrap.min.css" | prepend: site.baseurl }}" media="all">
+    <link rel="stylesheet" href="{{ "/css/vendor.min.css" | prepend: site.baseurl }}" media="all">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ "/css/main.min.css" | prepend: site.baseurl }}" media="all">
-
-    <!-- Custom Fonts -->
-    <link href="{{ "/vendor/font-awesome/css/font-awesome.min.css"  | prepend: site.baseurl}}" rel="stylesheet" type="text/css">
-    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <!-- <link href="//fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
-
-    <script>
-      $(function() {
-        var fonts = '//fonts.googleapis.com/css?family=Roboto';
-        if (document.createStyleSheet) document.createStyleSheet(fonts);
-        else $("head").append($("<link rel='stylesheet' href='"+ fonts +"' type='text/css' media='screen' />"));
-      });
-    </script>
+  
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open +Sans|Lora|Roboto">
 
     <!-- Sumo Me script-->
     <script src="//load.sumome.com/" data-sumo-site-id="6cd9e3ecf2eaf515c043962f2dd32f6dd030186d96fd53907a51f7f1bff7f930" async="async"></script>
