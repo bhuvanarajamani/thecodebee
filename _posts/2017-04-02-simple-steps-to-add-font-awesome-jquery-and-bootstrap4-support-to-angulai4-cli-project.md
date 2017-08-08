@@ -8,6 +8,7 @@ description: Simple steps to add Font Awesome, jQuery and Bootstrap4 to an Angul
 permalink: /simple-steps-to-add-font-awesome-jquery-and-bootstrap4-support-to-angulai4-cli-project/
 path: simple-steps-to-add-font-awesome-jquery-and-bootstrap4-support-to-angulai4-cli-project.md
 tags: [angular4, angularcli,bootstrap4,jquery,font-awesome,yarn]
+read_time: true
 sitemap:
     priority: 0.9
     changefreq: 'weekly'

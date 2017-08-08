@@ -8,6 +8,7 @@ description: 4 modern ways to deploy your Angular application in 5 minutes or le
 permalink: /4ways-to-host-angular-app-in-under-5-mins/
 path: 2017-02-14-4ways-to-host-angular-app-in-under-5-mins.md
 tags: [angular, angularcli,gh-pages,now,netlify,surge.sh,hosting]
+read_time: true
 sitemap:
     priority: 0.9
     changefreq: 'weekly'

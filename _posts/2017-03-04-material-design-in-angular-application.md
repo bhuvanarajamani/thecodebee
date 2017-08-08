@@ -8,6 +8,7 @@ description: Google Material Design in Angular Application using Angular Materia
 permalink: /material-design-in-angular-application/
 path: 2017-03-04-material-design-in-angular-application.md
 tags: [angular, angularcli,material design,angular-material]
+read_time: true
 sitemap:
     priority: 0.9
     changefreq: 'weekly'

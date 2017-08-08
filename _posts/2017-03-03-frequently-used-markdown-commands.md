@@ -8,6 +8,7 @@ description: Markdown commands that I frequently use for my blog posts
 permalink: /frequently-used-markdown-commands/
 path: 2017-03-03-frequently-used-markdown-commands.md
 tags: [markdown]
+read_time: true
 sitemap:
     priority: 0.9
     changefreq: 'weekly'

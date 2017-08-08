@@ -18,10 +18,12 @@ home-img: "home.jpg"
     </a>
     <!-- <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p> -->
     <p class="post-meta">
+        <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
         {% if post.updated %} 
             Updated: {{ post.updated | date: "%B %-d, %Y" }} | 
         {% endif %}
         Published: {{ post.date | date: "%B %-d, %Y" }}
+        <!-- {% include reading_time.html %} -->
     </p>
 </div>
 <hr>

@@ -8,6 +8,7 @@ description: How to simplify the setup fake REST API accessible in AngularCLI du
 permalink: /fake-api-for-angular-2+-during-development-using-angularcli/
 path: 2017-02-11-fake-api-for-angular-2+-during-development-using-angularcli.md
 tags: [angular, angularcli,rest,api,jsonserver]
+read_time: true
 sitemap:
     priority: 1.0
     changefreq: 'weekly'

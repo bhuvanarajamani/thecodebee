@@ -8,6 +8,7 @@ description: How to enable your Angular4 AngularCLI project to support D3 based 
 permalink: /how-to-enable-your-angulai-cli-project-to-support-d3js-based-data-visualizations/
 path: how-to-enable-your-angulai-cli-project-to-support-d3js-based-data-visualizations.md
 tags: [angular, angularcli, d3, d3v4, typescript, data visualization]
+read_time: true
 sitemap:
     priority: 0.9
     changefreq: 'weekly'
