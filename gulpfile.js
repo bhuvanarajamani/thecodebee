@@ -208,4 +208,4 @@ gulp.task('build:all', ['build:sass', 'build:jekyll']);
 gulp.task('serve:all', ['site:serve', 'site:reload']);
 
 //Default task for dev
-gulp.task('default', [ 'clean:all', 'copy:vendorlib', 'minify:all', 'copy:fonts', 'build:all', 'serve:all']);
+gulp.task('default', [ 'clean:all', 'copy:vendorlib', 'minify:all', 'copy:fonts', 'build:jekyll', 'serve:all']);
