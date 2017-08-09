@@ -12,14 +12,15 @@ layout: default
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% endif %}
                     <span class="meta">
-                        {{ page.date | date: "%B %-d, %Y" }}
+                        {{ page.date | date: "%B %-d, %Y" }} / {% include reading_time.html %}
+                    </span>
+                    <span class="meta">
                         {% for tag in page.tags %}
-                            <span class="tag-mark">
-                                <i class="fa fa-tag" aria-hidden="true">{{ tag }}</i>
-                            </span>
+                        <span class="tag-mark">
+                            <i class="fa fa-tag" aria-hidden="true">{{ tag }}</i>
+                        </span>
                         {% endfor %}
                     </span>
-                    <span class="meta">{% include reading_time.html %}</span>
                 </div>
             </div>
         </div>
