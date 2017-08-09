@@ -9,6 +9,7 @@ permalink: /material-design-in-angular-application/
 path: 2017-03-04-material-design-in-angular-application.md
 tags: [angular, angularcli,material design,angular-material]
 read_time: true
+toc: true
 sitemap:
     priority: 0.9
     changefreq: 'weekly'
@@ -19,6 +20,8 @@ In this blog post, let's see how to add material design to your angular applicat
 Follow the step-by-step process below to accomplish that goal.
 
 If you want to grab the source code alone, you can get it from the [repo](https://github.com/thecodebee/material-app).
+
+{% include toc.html %}
 
 ### 1. Scaffold a new app using Angular CLI
 

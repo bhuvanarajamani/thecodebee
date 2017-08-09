@@ -9,6 +9,7 @@ permalink: /simple-steps-to-add-font-awesome-jquery-and-bootstrap4-support-to-an
 path: simple-steps-to-add-font-awesome-jquery-and-bootstrap4-support-to-angulai4-cli-project.md
 tags: [angular4, angularcli,bootstrap4,jquery,font-awesome,yarn]
 read_time: true
+toc: true
 sitemap:
     priority: 0.9
     changefreq: 'weekly'
@@ -18,6 +19,8 @@ sitemap:
 This is a 'How-To' post where I'll walkthrough how you can set up some design defaults for your angular application. I'll be using bootstrap4 and font-awesome to get the basic good looking design for design challenged people like me *(or someone who's built their expertise in Bootstrap)*.
 
 If you want to grab the source code alone, you can get it from the [repo](https://github.com/thecodebee/ng-design).
+
+{% include toc.html %}
 
 ### 1. Scaffold a new app using Angular CLI
 

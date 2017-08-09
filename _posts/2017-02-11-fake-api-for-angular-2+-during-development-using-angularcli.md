@@ -9,6 +9,7 @@ permalink: /fake-api-for-angular-2+-during-development-using-angularcli/
 path: 2017-02-11-fake-api-for-angular-2+-during-development-using-angularcli.md
 tags: [angular, angularcli,rest,api,jsonserver]
 read_time: true
+toc: true
 sitemap:
     priority: 1.0
     changefreq: 'weekly'
@@ -17,29 +18,7 @@ sitemap:
 
 [Angular CLI](https://github.com/angular/angular-cli){:target="_blank"} has made the scaffolding of an Angular2+ application so simple. The next major use case for most of the web applications is accessing a REST API and perform one or all of the CRUD operations. Though there are services like [Firebase](https://firebase.google.com){:target="_blank"} which have made the data storage as well as API access possible in few simple steps, I'm going to explain about another easy approach for setting up the same.
 
-### Table of contents
-
-- <a href="#basic-setup">Basic setup</a>
-  - <a href="#install-angular-cli">Angular CLI Installation</a>
-  - <a href="#create-new-project">Create Project</a>
-  - <a href="#install-yarn">Install Yarn Package Manager</a>
-  - <a href="#serve-scaffolded-project">Serving the scaffolded project</a>
-- <a href="#data-structure">Data structure</a>
-  - <a href="#create-json">Create JSON file</a>
-- <a href="#method-1">Access Fake REST API - Method:1</a>
-  - <a href="#create-service-class">Scaffold Service Class</a>
-  - <a href="#call-api">Call API</a>
-  - <a href="#access-data">Access data from component</a>
-  - <a href="#present-data">Present data in UI</a>
-- <a href="#method-2">Access Fake REST API - Method:2</a>
-  - <a href="#install-json-server">Install JSON Server</a>
-  - <a href="#run-json-server">Run JSON Server</a>
-  - <a href="#update-service">Update Service</a>
-  - <a href="#proxy-setup">Setting up proxy for API</a>
-- <a href="#method-3">Access Fake REST API - Method:3</a>
-  - <a href="#install-concurrently">Install concurrently</a>
-  - <a href="#updated-server-command">Start server</a>
-- <a href="#source-code">Source Code Repo</a>
+{% include toc.html %}
 
 ### Basic Setup
 

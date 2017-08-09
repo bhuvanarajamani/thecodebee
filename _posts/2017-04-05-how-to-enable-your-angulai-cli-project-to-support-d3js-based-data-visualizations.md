@@ -9,6 +9,7 @@ permalink: /how-to-enable-your-angulai-cli-project-to-support-d3js-based-data-vi
 path: how-to-enable-your-angulai-cli-project-to-support-d3js-based-data-visualizations.md
 tags: [angular, angularcli, d3, d3v4, typescript, data visualization]
 read_time: true
+toc: true
 sitemap:
     priority: 0.9
     changefreq: 'weekly'
@@ -21,6 +22,8 @@ This is a How-To tutorial where I'll walk you through the steps in enabling your
 
 > What is D3?
 D3.js is a JavaScript library for manipulating documents based on data. D3 helps you bring data to life using HTML, SVG, and CSS.
+
+{% include toc.html %}
 
 ### 1. Install Angular CLI
 We would be building the project using Angular CLI and running the project locally. Version used for this article is `@angular/cli: 1.2.7`. 

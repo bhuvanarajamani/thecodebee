@@ -9,6 +9,7 @@ permalink: /frequently-used-markdown-commands/
 path: 2017-03-03-frequently-used-markdown-commands.md
 tags: [markdown]
 read_time: true
+toc: true
 sitemap:
     priority: 0.9
     changefreq: 'weekly'
@@ -19,6 +20,8 @@ One main reason for me to choose Jekyll as my blog platform is the ability to wr
 > Markdown is a lightweight markup language with plain text formatting syntax designed so that it can be converted to HTML and many other formats using a tool by the same name.[8] Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
 
 Go to [https://en.wikipedia.org/wiki/Markdown](https://en.wikipedia.org/wiki/Markdown) or [https://daringfireball.net](https://daringfireball.net) to know more about Markdown.
+
+{% include toc.html %}
 
 Here are some of the commands that I frequently use for writing my blog posts.
 

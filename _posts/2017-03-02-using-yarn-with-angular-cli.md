@@ -9,6 +9,7 @@ permalink: /using-yarn-with-angular-cli/
 path: 2017-03-02-using-yarn-with-angular-cli.md
 tags: [angular, angularcli,yarn]
 read_time: true
+toc: true
 sitemap:
     priority: 0.9
     changefreq: 'weekly'
@@ -20,6 +21,8 @@ Yarn is the new package manager and is gaining popularity over npm as default pa
 Go to [official yarn page](https://yarnpkg.com/) to learn more.
 
 In this post, I'm going to cover how to install yarn, set yarn as default package manager for Angular CLI and some handy commands.
+
+{% include toc.html %}
 
 ### 1. Install Yarn
 

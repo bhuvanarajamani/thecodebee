@@ -9,6 +9,7 @@ permalink: /4ways-to-host-angular-app-in-under-5-mins/
 path: 2017-02-14-4ways-to-host-angular-app-in-under-5-mins.md
 tags: [angular, angularcli,gh-pages,now,netlify,surge.sh,hosting]
 read_time: true
+toc: true
 sitemap:
     priority: 0.9
     changefreq: 'weekly'
@@ -27,6 +28,8 @@ In this tutorial, I'm presenting the 4 simple ways to host your app in under 5 m
 
 > This tutorial assumes you have a simple angular project you would want to host. I'm using the `fake-rest-api` project created in previous tutorial. You can follow that article from [here](/fake-api-for-angular-2+-during-development-using-angularcli). 
 > You should have the project ready and committed to `master` branch. 
+
+{% include toc.html %}
 
 ### Initial Setup
 
