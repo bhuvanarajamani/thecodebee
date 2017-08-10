@@ -31,14 +31,14 @@ words_per_minute: 175
 #   startings: [html, head, body]
 
 compress_html:
-  clippings: []
+  clippings: all
   comments: []
-  endings: []
+  endings: all
   ignore:
-    envs: []
+    envs: [local]
   blanklines: false
   profile: false
-  startings: []
+  startings: [html, head, body]
 
 # theme: minima
 gems:
