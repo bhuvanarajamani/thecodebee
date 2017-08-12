@@ -66,6 +66,7 @@ ng new ng-tic-tac-toe
 We would be using scss files for bootstrap and font-awesome. So, in case you want to add some custom styles, scss is a good choice here and AngularCLI supports it with one line of update.  
 
 ```bash
+cd ng-tic-tac-toe
 ng set defaults.styleExt scss
 ```
 
@@ -109,10 +110,10 @@ As we're building this app using Angular, let's think the app layout in terms of
 
 Here are the design elements for this app.
 
-1. App title => Text in the main `AppComponent` 
-2. Board => New component to be created. 
-* Game status will be a text in Board component
-* New Game will be a button in Board component
-3. Cell => New component to be created; that will be laid out within Board component
+1. **App title** => Text in the main `AppComponent` 
+2. **Board** => New component to be created. 
+* **Game status** will be a text in Board component
+* **New Game** will be a button in Board component
+3. **Cell** => New component to be created; that will be laid out within Board component
 
-We'll start creating the components and apply styles in Part2.
+We'll start creating the components and apply styles in [Part2](/how-to-create-a-simple-tic-tac-toe-game-using-angular-with-the-help-of-angular-cli-part2).
