@@ -182,5 +182,5 @@ At this stage, our app looks like below.
 
 <img src="{{ site.baseurl }}/img/posts/tic-tac-toe-ui.png" alt="Tic-Tac-Toe UI" class="img-responsive">
 
-We'll implement the core game logic in Part3.
+We'll implement the core game logic in [Part3](/how-to-create-a-simple-tic-tac-toe-game-using-angular-with-the-help-of-angular-cli-part3).
 
