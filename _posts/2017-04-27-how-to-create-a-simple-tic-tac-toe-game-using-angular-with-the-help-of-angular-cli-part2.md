@@ -32,12 +32,11 @@ ng g component presentation/cell
 For simplicity, let's rename the selectors from `app-board` to `board` and `app-cell` to `cell` and call the board from `AppComponent`. 
 Below is the complete `app.component.html`.
 
-```text
+```html
 <div>
   <div class="main-app">
     <div>
       <h1>{{ title }}</h1>
-      &#x7b;
     </div>
     <board></board>
   </div>
