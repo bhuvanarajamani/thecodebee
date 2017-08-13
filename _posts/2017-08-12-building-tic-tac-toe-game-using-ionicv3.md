@@ -3,7 +3,7 @@ layout:     post
 title:      "Building a Tic Tac Toe game using Ionic V3"
 date:       2017-08-12 12:00:00
 comments: true
-post-img: "angular-firebase.png"
+post-img: "ionic-tictactoe.png"
 description: Building a Tic Tac Toe game using Ionic V3
 permalink: /building-tic-tac-toe-game-using-ionicv3/
 path: building-tic-tac-toe-game-using-ionicv3.md
