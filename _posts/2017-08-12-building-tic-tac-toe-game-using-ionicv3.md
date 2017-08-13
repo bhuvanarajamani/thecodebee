@@ -13,7 +13,6 @@ sitemap:
     changefreq: 'weekly'
     lastmod: 2017-08-12T09:13:30-06:00
 ---
-
 ## What is Ionic ?
 
 Ionic is the top open source framework for building amazing mobile apps. It enables us to build native and progressive web apps using the web technologies. For more information, please refer to [ionic](https://ionicframework.com) website.
