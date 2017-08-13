@@ -8,6 +8,7 @@ description: Building a Tic Tac Toe game using Ionic V3
 permalink: /building-tic-tac-toe-game-using-ionicv3/
 path: building-tic-tac-toe-game-using-ionicv3.md
 tags: [angular, ionicv3, tic-tac-toe, game]
+read_time: true
 sitemap:
     priority: 0.9
     changefreq: 'weekly'
