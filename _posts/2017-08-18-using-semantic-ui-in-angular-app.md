@@ -15,7 +15,6 @@ sitemap:
     changefreq: 'weekly'
     lastmod: 2017-08-18T09:13:30-06:00
 ---
-
 In this post, let's see how we can enable Semantic UI in an Angular application.
 
 {% include toc.html %}
